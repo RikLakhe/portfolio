@@ -24,7 +24,7 @@ body, html {
     height: 100vh; /* Full viewport height */
     width: 100%;
     background: linear-gradient(135deg, #000000, #000033); /* Black to Dark Blue gradient */
-    color: white;
+    color: #fff;
 }
 
 .hero h1 {
