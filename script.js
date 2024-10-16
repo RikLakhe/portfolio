@@ -18,16 +18,21 @@ function type() {
             j--;
         }
 
+        // When the name is fully typed, pause and then start deleting
         if (j === names[i].length) {
             isDeleting = true;
             setTimeout(type, 1000); // Pause before deleting
-        } else if (j === 0) {
+        } 
+        // When the name is completely deleted, switch to the next name
+        else if (j === 0) {
             isDeleting = false;
             i++;
             if (i === names.length) i = 0; // Loop back to the first name
         }
 
-        setTimeout(type, isDeleting ? 100 : 200); // Speed of typing and deleting
+        // Adjust the typing speed
+        let typingSpeed = isDeleting ? 50 : Math.random() * (200 - 100) + 100;
+        setTimeout(type, typingSpeed);
     }
 }
 
