@@ -37,6 +37,11 @@ h2 {
     max-width: 600px;
 }
 
+.hero-title {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
 .typing-animation {
     font-size: 3rem;
     font-weight: bold;
