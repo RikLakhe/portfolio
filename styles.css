@@ -1,9 +1,11 @@
 body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #000; // Black background
+    color: #fff;
+    overflow-x: hidden;
 }
 
 .container {
@@ -21,39 +23,65 @@ h2 {
 
 /* Hero Section */
 .hero {
-    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 0;
+    height: 100vh;
+    background-color: #000; // Black background for the hero section
+    color: #fff;
+    padding: 20px;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    margin: 0;
+.hero-content {
+    max-width: 600px;
 }
 
-.hero-title span {
-    color: white;
+.typing-animation {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e3a8a; // Dark Blue
+    overflow: hidden; 
+    white-space: nowrap;
+    border-right: 3px solid #1e3a8a; // Cursor effect
+    width: 0; 
+    animation: typing 3s steps(10) infinite alternate, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 10ch; } // Change this based on your longest text
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #1e3a8a; }
 }
 
 .hero-description {
     font-size: 1.5rem;
-    margin-top: 10px;
-    color: #bbb;
+    margin-top: 15px;
 }
 
 .social-links {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .social-links a {
-    color: white;
-    font-size: 2rem;
-    margin: 0 15px;
-    transition: color 0.3s;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-links a i {
+    margin-right: 5px;
 }
 
 .social-links a:hover {
-    color: #00bfff;
+    color: #1e3a8a; // Dark Blue on hover
 }
 
 /* About Section */
