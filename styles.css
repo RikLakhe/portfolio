@@ -18,9 +18,10 @@ body, html {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    padding-left: 50px; /* Add padding for left alignment */
     height: 100vh; /* Full viewport height */
     width: 100%;
     background: linear-gradient(135deg, #000000, #000033); /* Black to Dark Blue gradient */
@@ -48,6 +49,12 @@ body, html {
 }
 
 /* Typing Effect */
+.hero-typing-container {
+    height: 60px; /* Fix height to prevent shifting */
+    display: flex;
+    align-items: center;
+}
+
 #hero-typing {
     font-size: 2.5em;
     font-weight: bold;
@@ -68,7 +75,7 @@ body, html {
 
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 20px;
 }
 
@@ -76,16 +83,14 @@ body, html {
     margin: 0 10px;
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.social-links a i {
-    margin-right: 5px;
+    font-size: 1.5rem;
 }
 
 .social-links a:hover {
-    color: #1e3a8a; // Dark Blue on hover
+    color: #1e3a8a; /* Dark Blue on hover */
 }
+
+/* Other sections and styles remain the same */
 
 /* About Section */
 .about p {
