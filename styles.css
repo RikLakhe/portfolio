@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: #000; // Black background
+    background-color: #000; /* Black background for the whole page */
     color: #fff;
     overflow-x: hidden;
 }
@@ -15,26 +15,31 @@ body, html {
     padding: 40px 0;
 }
 
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: darkblue;
-}
-
 /* Hero Section */
 .hero {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 100vh;
-    background-color: #000; // Black background for the hero section
-    color: #fff;
-    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background: linear-gradient(135deg, #000000, #000033); /* Black to Dark Blue gradient */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .hero-content {
     max-width: 600px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #b0b0b0;
 }
 
 .hero-title {
@@ -42,25 +47,19 @@ h2 {
     margin: 0;
 }
 
-.typing-animation {
-    font-size: 3rem;
+/* Typing Effect */
+#hero-typing {
+    font-size: 2.5em;
     font-weight: bold;
-    color: #1e3a8a; // Dark Blue
-    overflow: hidden; 
-    white-space: nowrap;
-    border-right: 3px solid #1e3a8a; // Cursor effect
-    width: 0; 
-    animation: typing 3s steps(10) infinite alternate, blink 0.7s infinite;
+    color: #ffffff;
+    border-right: 2px solid #ffffff;
+    padding-right: 5px;
+    animation: blink 0.7s step-end infinite;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 10ch; } // Change this based on your longest text
-}
-
+/* Blinking cursor animation */
 @keyframes blink {
-    from, to { border-color: transparent; }
-    50% { border-color: #1e3a8a; }
+    50% { border-color: transparent; }
 }
 
 .hero-description {
